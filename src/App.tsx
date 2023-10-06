@@ -31,7 +31,10 @@ function App() {
     <React.Fragment>
       <div
         className="container"
-        style={{ width: screenSize.width, height: screenSize.height }}
+        style={{
+          width: screenSize.width,
+          height: screenSize.height,
+        }}
       >
         <div className="card">
           <div className="card-inner">

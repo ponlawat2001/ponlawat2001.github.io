@@ -17,6 +17,11 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
 a {
   font-family: serif;
   text-decoration: none;

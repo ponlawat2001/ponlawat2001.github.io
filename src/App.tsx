@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import React from "react";
-import logo from "./assets/icon.png";
-import faceicon from "./assets/facebook.png";
-import disicon from "./assets/discord.png";
-import linkinicon from "./assets/linkedin.png";
-import giticon from "./assets/github-sign.png";
+import logo from "./assets/icons/logo.png";
+import faceicon from "./assets/icons/facebook.png";
+import disicon from "./assets/icons/discord.png";
+import linkinicon from "./assets/icons/linkedin.png";
+import giticon from "./assets/icons/github-sign.png";
 
 function App() {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());

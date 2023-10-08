@@ -6,6 +6,7 @@ import faceicon from "./assets/icons/facebook.png";
 import disicon from "./assets/icons/discord.png";
 import linkinicon from "./assets/icons/linkedin.png";
 import giticon from "./assets/icons/github-sign.png";
+import toast, { Toaster } from "react-hot-toast";
 
 function App() {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -27,15 +28,15 @@ function App() {
       window.removeEventListener("resize", updateDimension);
     };
   }, [screenSize]);
+
   return (
     <React.Fragment>
-      <div
-        className="container"
-        style={{
-          width: screenSize.width,
-          height: screenSize.height,
-        }}
-      >
+      {/* Toaster init */}
+      <div>
+        <Toaster />
+      </div>
+
+      <div className="container">
         <div className="card">
           <div className="card-inner">
             <div className="card-front">
@@ -87,6 +88,19 @@ function App() {
                 <p className="title-back">Chatkaew</p>
                 <p className="des-back">Computer engineer</p>
                 <p className="solid" />
+                <p
+                  className="des-email"
+                  onClick={async () => {
+                    await navigator.clipboard.writeText(
+                      "ponlawat.chatkaew@gmail.com"
+                    );
+                    toast("Email Copied!", {
+                      style: { fontSize: 12, color: "#687bce" },
+                    });
+                  }}
+                >
+                  ponlawat.chatkaew@gmail.com
+                </p>
               </div>
             </div>
           </div>

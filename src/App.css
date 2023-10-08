@@ -1,19 +1,102 @@
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -64px, 0); /* ADDED - start y position as -50px */
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); /* ADDED - move y to 0 on hover */
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card {
+    padding: 0px 32px;
+    .card-front {
+      .title {
+        font-size: 24px;
+      }
+      .des {
+        font-size: 12px;
+      }
+      height: 80%;
+    }
+    .card-back {
+      height: 90%;
+    }
+    .card-back-inner {
+      padding: 0px 16px;
+    }
+
+    .contact {
+      padding: 16px 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .card {
+    padding: 0px 56px;
+    .card-front {
+      .title {
+        font-size: 24px;
+      }
+      .des {
+        font-size: 12px;
+      }
+      height: 80%;
+    }
+    .card-back {
+      height: 80%;
+    }
+    .card-back-inner {
+      padding: 0px 16px;
+      .title-back {
+        font-size: 18px;
+      }
+      .des-back {
+        font-size: 12px;
+      }
+      .solid {
+        width: 100px;
+      }
+      .des-email {
+        font-size: 8px;
+      }
+    }
+    .contact {
+      font-size: 12px;
+      padding: 16px 16px;
+    }
+  }
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 400px;
+  height: 250px;
+  padding: 64px 0px;
 }
 
 .card {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 375px;
-  height: 245px;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+
+  width: 100%;
+  height: 100%;
 
   border-radius: 16px;
   background-color: transparent;
   perspective: 1000px;
+
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
 }
 
 .card-inner {
@@ -44,6 +127,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s ease-in-out;
+
   border-radius: 16px;
   opacity: 0.4;
   background: linear-gradient(135deg, #a3b8ff55 25%, transparent 25%) -29px 0/
@@ -59,6 +144,8 @@
   align-items: start;
   border-radius: 16px;
   opacity: 0.7;
+  transition: all 0.5s ease-in-out;
+
   background: linear-gradient(135deg, #f2f5ff 25%, transparent 25%) -29px 0/
       58px 58px,
     linear-gradient(225deg, #e3e9ff 25%, transparent 25%) -29px 0/ 58px 58px,
@@ -72,6 +159,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: end;
+  transition: all 0.5s ease-in-out;
+
   padding-right: 32px;
   height: 100%;
 }
@@ -88,11 +177,10 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: start;
-  padding: 16px 36px;
+  padding: 16px 32px;
   background: linear-gradient(100deg, #4054af 0%, #8b9add 100%);
   border-radius: 0px 32px 32px 0px;
-  width: 100%;
-  height: 125px;
+  transition: all 0.5s ease-in-out;
 }
 
 .contact div {
@@ -100,6 +188,7 @@
   align-items: center;
   padding: 4px;
   transition: all 0.5s ease-in-out;
+
   &:hover {
     transform: scale(1.1);
     text-shadow: 0 0 4px #ffffff;
@@ -113,6 +202,7 @@
 .title {
   font-size: 36px;
   color: white;
+
   text-shadow: 1px 1px 1px gray;
 }
 
@@ -127,6 +217,7 @@
   letter-spacing: 0px;
   font-weight: 600;
   color: #4054af;
+  transition: all 0.5s ease-in-out;
 }
 
 .des-back {
@@ -134,11 +225,25 @@
   letter-spacing: 0px;
   font-weight: 400;
   color: #4054af;
+  transition: all 0.5s ease-in-out;
 }
 
 .solid {
-  width: 100px;
-  margin-top: 4px;
+  width: 115px;
+  margin: 4px 0px;
   border-radius: 8px;
   border-top: 1px solid #4054af60;
+  transition: all 0.5s ease-in-out;
+}
+
+.des-email {
+  font-size: 10px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  color: #687bce;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    color: #2641a8;
+    text-decoration: underline;
+  }
 }

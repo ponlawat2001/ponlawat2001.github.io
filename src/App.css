@@ -11,7 +11,7 @@
 
 @media only screen and (max-width: 500px) {
   .card {
-    padding-right: 32px;
+    padding: 0px 32px;
     .card-front {
       .title {
         font-size: 24px;
@@ -50,20 +50,21 @@
       height: 80%;
     }
     .card-back-inner {
-      padding-right: 16px;
-      .title-back {
-        font-size: 18px;
-      }
-      .des-back {
-        font-size: 12px;
-      }
-      .solid {
-        width: 100px;
-      }
-      .des-email {
-        font-size: 8px;
-      }
+      padding: 0px 16px;
     }
+    .title-back {
+      font-size: 18px;
+    }
+    .des-back {
+      font-size: 12px;
+    }
+    .solid {
+      width: 100px;
+    }
+    .des-email {
+      font-size: 8px;
+    }
+
     .contact {
       font-size: 12px;
       padding: 16px 16px;
@@ -161,7 +162,7 @@
   align-items: end;
   transition: all 0.5s ease-in-out;
 
-  padding-right: 32px;
+  padding: 0px 32px;
   height: 100%;
 }
 
